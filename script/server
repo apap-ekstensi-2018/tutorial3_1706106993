@@ -1,0 +1,6 @@
+#!/bin/sh
+
+echo 'Starting server'
+export MAVEN_OPTS='-Xmx512m -XX:MaxPermSize=128M'
+
+./mvnw spring-boot:run
