@@ -9,8 +9,6 @@ public class InMemoryStudentService implements StudentService {
 
   @Override
   public StudentModel selectStudent(String npm) {
-	StudentModel temp;
-    // Implement
 	for(StudentModel m : studentList) {
 	  if(m.getNpm().equals(npm)) {
 	    return m;

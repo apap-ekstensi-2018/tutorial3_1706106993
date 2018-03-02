@@ -1,0 +1,33 @@
+a. Materi ini menjalaskan bahwa layer pada aplikasi web ada macam macam. Fungsinya pun berbeda-berda. Dalam hal ini model digunakan untuk resource, service untuk mengelola resource, dan controller untuk pointing kedalam view sementara view sendiri untuk menampilkan resource kepada user.
+
+b. Jawaban setiap point
+  1. Hasilnya : Data berhasil ditambahkan
+  2. Hasilnya : Whitelabel Eror Page
+     Required double parameter 'gpa' is not present -> Karena gpa tidak ada dan tidak ada default value untuk gpa.
+  3. Muncul, karena sudah ditambahkan getter dan setter. serta mengganti pemanggilan variable ke getter setter.
+  4. Hasilnya : Whitelabel Error Page
+   Terjadi karena server mati dan data mahasiswa dengan npm 1234 tidak ada dalam List<Student> sehingga keluar error.
+  5. Muncul
+  6. Muncul
+
+c. Select student menggunakan enhanced for loop, dengan menggunakan variable temporary. Kemudian jika menemukan npm yang sama akan return temporary variable. selain itu akan null. code :
+
+public StudentModel selectStudent(String npm) {
+  for(StudentModel m : studentList) {
+    if(m.getNpm().equals(npm)) {
+      return m;
+     }
+  }
+  return null;
+}
+
+d. Fitur delete
+dalam fitur delete yang pasti mencari student yang ada dalam List<StudentModel>, jika tidak ada maka akan muncuk pesan error. fitur delete ini menggunakan fitur selectStudent yang telah ada dan menggunakan fitur remove dari java List. Code :
+public StudentModel delete(String npm){
+  StudentModel temp = selectStudent(npm);
+  if(temp != null && studentList.remove(temp)){
+    return temp;
+  }
+
+  return null;
+}
