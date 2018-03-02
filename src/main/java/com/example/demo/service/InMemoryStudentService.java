@@ -28,4 +28,14 @@ public class InMemoryStudentService implements StudentService {
   public void addStudent(StudentModel student) {
     studentList.add(student);
   }
+
+  @Override
+  public StudentModel delete(String npm){
+    StudentModel temp = selectStudent(npm);
+    if(temp != null && studentList.remove(temp)){
+      return temp;
+    }
+
+    return null;
+  }
 }

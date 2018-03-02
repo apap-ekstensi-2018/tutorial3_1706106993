@@ -1,0 +1,10 @@
+1. Hasilnya : Data berhasil ditambahkan
+2. Hasilnya : Whitelabel Eror Page
+   Required double parameter 'gpa' is not present -> Karena gpa tidak ada dan tidak ada default value untuk gpa.
+3. Muncul, karena sudah ditambahkan getter dan setter. serta mengganti pemanggilan variable ke getter setter.
+4. Hasilnya : Whitelabel Error Page
+   Terjadi karena server mati dan data mahasiswa dengan npm 1234 tidak ada dalam List<Student> sehingga keluar error.
+5. Muncul
+6. Muncul
+
+

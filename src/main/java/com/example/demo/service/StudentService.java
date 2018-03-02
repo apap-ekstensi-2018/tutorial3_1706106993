@@ -7,4 +7,5 @@ public interface StudentService {
   StudentModel selectStudent(String npm);
   List<StudentModel> selectAllStudents();
   void addStudent(StudentModel student);
+  StudentModel delete(String npm);
 }
